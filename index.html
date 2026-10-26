@@ -94,7 +94,7 @@
     .top-bar {
       background: #061e13;
       color: #d1fae5;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: .06em;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       padding: 8px 0;
@@ -138,7 +138,7 @@
       color: #a7f3d0;
       transition: transform .2s, color .2s;
       font-weight: 600;
-      font-size: 11px;
+      font-size: 12px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -204,8 +204,8 @@
     }
 
     .logo-text span {
-      font-size: 9px;
-      letter-spacing: .18em;
+      font-size: 12px;
+      letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--brand);
       font-weight: 600;
@@ -272,14 +272,8 @@
       min-width: 0;
     }
 
-    .desk-call {
-      text-align: right;
-      font-size: 9.5px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--muted-light);
-      line-height: 1.35;
-      white-space: nowrap;
+    .site-header .desk-call {
+      display: none;
     }
 
     .desk-call b {
@@ -300,9 +294,9 @@
       gap: 8px;
       background: var(--brand);
       color: #ffffff;
-      font-size: 10.5px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
+      font-size: 13.5px;
+      letter-spacing: .02em;
+      text-transform: none;
       font-weight: 600;
       padding: 0 20px;
       height: 42px;
@@ -428,9 +422,9 @@
 
     .hero-top {
       display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 50px;
-      align-items: end;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 32px;
+      align-items: start;
       margin-bottom: 36px;
     }
 
@@ -521,7 +515,7 @@
       margin-bottom: 6px;
     }
 
-    .flag .cap h3 {
+    .flag .cap h2 {
       font-size: 32px;
       color: #ffffff;
       margin: 0 0 6px;
@@ -622,13 +616,14 @@
     }
 
     .stat-card span {
-      font-size: 11px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: normal;
+      text-transform: none;
       color: var(--muted);
       display: block;
       margin-top: 8px;
-      font-weight: 600;
+      font-weight: 500;
+      line-height: 1.4;
     }
 
     /* 4 Hallmarks of MB Realty with Crisp SVG Icons */
@@ -677,19 +672,20 @@
       box-shadow: 0 4px 12px rgba(0, 143, 85, 0.3);
     }
 
-    .hallmark-text h5 {
+    .hallmark-text .hallmark-title {
       margin: 0;
+      display: block;
       font-family: var(--sans);
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 700;
       color: var(--text-heading);
     }
 
     .hallmark-text p {
       margin: 2px 0 0;
-      font-size: 11.5px;
+      font-size: 13px;
       color: var(--muted);
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     /* About Section */
@@ -815,12 +811,19 @@
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
+      position: relative;
+      cursor: pointer;
     }
 
     .service-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       border-color: var(--brand);
       box-shadow: 0 24px 44px -6px rgba(0, 50, 25, 0.16);
+    }
+
+    .service-card:focus-within {
+      outline: 2px solid var(--brand);
+      outline-offset: 2px;
     }
 
     .service-card .img-box {
@@ -837,24 +840,25 @@
     }
 
     .service-card:hover .img-box img {
-      transform: scale(1.1);
+      transform: scale(1.08);
     }
 
     .service-card .tag {
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(4px);
-      color: var(--brand);
-      font-size: 9.5px;
-      letter-spacing: .14em;
+      background: #ffffff;
+      color: var(--dark-green);
+      font-size: 10.5px;
+      letter-spacing: .1em;
       text-transform: uppercase;
       font-weight: 700;
-      padding: 5px 12px;
+      padding: 6px 12px;
       border-radius: 4px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(0, 143, 85, 0.35);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
       transition: all .35s ease;
+      z-index: 2;
     }
 
     .service-card:hover .tag {
@@ -878,7 +882,7 @@
     }
 
     .service-card p {
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--muted);
       line-height: 1.65;
       margin-bottom: 20px;
@@ -886,15 +890,23 @@
     }
 
     .service-card .more-link {
-      font-size: 11px;
-      letter-spacing: .12em;
+      font-size: 12px;
+      letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--brand);
       font-weight: 700;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      margin-top: auto;
       transition: gap .2s;
+    }
+
+    .service-card .more-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
     }
 
     .service-card:hover .more-link {
@@ -1174,24 +1186,22 @@
     }
 
     .clients-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 960px;
+      margin: 36px auto 0;
     }
 
     .client-card {
       background: #ffffff;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 20px 32px;
+      padding: 24px 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-width: 240px;
       box-shadow: var(--shadow-sm);
       transition: all .3s;
     }
@@ -1203,11 +1213,11 @@
     }
 
     .client-card img {
-      max-height: 52px;
+      max-height: 48px;
       max-width: 160px;
       object-fit: contain;
-      filter: grayscale(80%);
-      transition: filter .3s;
+      filter: none;
+      transition: transform .3s;
     }
 
     .client-card:hover img {
@@ -1349,11 +1359,17 @@
     .form-footer {
       grid-column: 1 / -1;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 8px;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .form-footer button.btn {
+      align-self: flex-start;
+      min-width: 180px;
+      height: 46px;
+      font-size: 14px;
     }
 
     .form-footer small {
@@ -1392,9 +1408,33 @@
       gap: 50px;
     }
 
-    .footer-brand h4 {
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 8px;
+      text-transform: none;
+    }
+
+    .footer-col h4::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 28px;
+      height: 2px;
+      background: var(--brand-accent);
+    }
+
+    .footer-brand .footer-brand-title {
       color: #ffffff;
       font-size: 22px;
+      font-family: var(--serif);
+      letter-spacing: .08em;
+      display: block;
       margin: 14px 0 10px;
     }
 
@@ -1851,7 +1891,7 @@
         <img src="images/logo.jpg" alt="MB Realty Logo" class="logo-img">
         <div class="logo-text">
           <strong>M B REALTY</strong>
-          <span>Architectural Holdings &amp; PMC</span>
+          <span>Architectural Holdings</span>
         </div>
       </a>
 
@@ -1951,7 +1991,7 @@
 
         <div class="cap">
           <small>Signature Development · Mumbai</small>
-          <h3 id="flagTitle">Wadala Antop Hill</h3>
+          <h2 id="flagTitle">Wadala Antop Hill</h2>
           <p id="flagDesc">Premier Residential &amp; Commercial High-Rise Development by MB Realty.</p>
         </div>
 
@@ -2002,7 +2042,7 @@
             </span>
           </div>
           <div class="hallmark-text">
-            <h5>Professional Builder</h5>
+            <strong class="hallmark-title">Professional Builder</strong>
             <p>Proven civil engineering &amp; master planning</p>
           </div>
         </div>
@@ -2017,7 +2057,7 @@
             </span>
           </div>
           <div class="hallmark-text">
-            <h5>We Deliver Quality</h5>
+            <strong class="hallmark-title">We Deliver Quality</strong>
             <p>Rigorous quality diligence &amp; material audits</p>
           </div>
         </div>
@@ -2032,7 +2072,7 @@
             </span>
           </div>
           <div class="hallmark-text">
-            <h5>Always On Time</h5>
+            <strong class="hallmark-title">Always On Time</strong>
             <p>Committed delivery within authorized cost</p>
           </div>
         </div>
@@ -2148,7 +2188,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 40px;" class="anim-fade-up">
-        <a href="services.html" class="btn" style="padding: 0 28px; height: 46px; font-size: 11.5px;">
+        <a href="services.html" class="btn ghost" style="padding: 0 28px; height: 46px; font-size: 13.5px;">
           View All Services &amp; Detailed Capabilities &rarr;
         </a>
       </div>
@@ -2179,7 +2219,7 @@
               </span>
             </div>
             <div>
-              <h4>20+ Years of Field Experience</h4>
+              <h3>20+ Years of Field Experience</h3>
               <p>In the construction industry since 1998, executing high-rise residential towers and commercial spaces
                 under reputed builders.</p>
             </div>
@@ -2198,7 +2238,7 @@
               </span>
             </div>
             <div>
-              <h4>Qualified PMC Experts</h4>
+              <h3>Qualified PMC Experts</h3>
               <p>Tackling constructability challenges, long-lead materials, inter-contractor coordination, engineering
                 issues, and safety protocol audits.</p>
             </div>
@@ -2217,7 +2257,7 @@
               </span>
             </div>
             <div>
-              <h4>Best Customer Services &amp; Transparency</h4>
+              <h3>Best Customer Services &amp; Transparency</h3>
               <p>Transparent communication, strict compliance with statutory authorities, and proactive resolution to
                 safeguard client investment.</p>
             </div>
@@ -2250,7 +2290,7 @@
               <div>PMC Role<b>Complete Lifecycle PMC</b></div>
               <div>Status<b>Structural Execution</b></div>
             </div>
-            <a href="#contact" class="btn ghost" style="width:100%; justify-content:center;">Inquire Details</a>
+            <a href="#contact" class="btn" style="width:100%; justify-content:center;">Inquire Details</a>
           </div>
         </article>
 
@@ -2269,7 +2309,7 @@
               <div>PMC Role<b>SRA Planning &amp; Engineering</b></div>
               <div>Status<b>Finishing Phase</b></div>
             </div>
-            <a href="#contact" class="btn ghost" style="width:100%; justify-content:center;">Inquire Details</a>
+            <a href="#contact" class="btn" style="width:100%; justify-content:center;">Inquire Details</a>
           </div>
         </article>
 
@@ -2288,7 +2328,7 @@
               <div>PMC Role<b>Quality Audits &amp; Delivery</b></div>
               <div>Status<b>Active Development</b></div>
             </div>
-            <a href="#contact" class="btn ghost" style="width:100%; justify-content:center;">Inquire Details</a>
+            <a href="#contact" class="btn" style="width:100%; justify-content:center;">Inquire Details</a>
           </div>
         </article>
       </div>
@@ -2297,7 +2337,8 @@
     <!-- Featured Gallery -->
     <section class="section-gallery wrap" id="gallery">
       <div class="sec-header anim-fade-up">
-        <div class="eyebrow">Work Archive</div>
+        <a href="#gallery" class="eyebrow" style="text-decoration:none;"><span
+            style="text-decoration:underline; text-underline-offset:4px;">Work Archive</span> &rarr;</a>
         <h2>Our Featured Works</h2>
         <p>Visual records of our civil construction sites, structural frameworks, and completed handovers.</p>
       </div>
@@ -2341,22 +2382,21 @@
     <!-- Group of Companies -->
     <div class="wrap">
       <section class="section-group anim-fade-up">
-        <div class="group-wrap">
-          <div class="group-left">
-            <div class="eyebrow" style="color:#72e4ac">Corporate Network</div>
-            <h3>Group of Companies</h3>
-            <p>Our synergistic corporate entities work in tandem to deliver comprehensive real estate, technical
-              contracting, and project management services.</p>
+        <div class="sec-header" style="margin-bottom: 30px;">
+          <div class="eyebrow" style="color:#72e4ac">Corporate Network</div>
+          <h2 style="color:#ffffff;">Group of Companies</h2>
+          <p style="color:#b9d8c9;">Our synergistic corporate entities work in tandem to deliver comprehensive real
+            estate, technical contracting, and project management services.</p>
+        </div>
+        <div class="group-cards"
+          style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto;">
+          <div class="group-box">
+            <b>Brijbhushan Realtech (OPC) Pvt. Ltd.</b>
+            <span>BRPL - (OPC) · Civil Contracting &amp; Construction</span>
           </div>
-          <div class="group-cards">
-            <div class="group-box">
-              <b>Brijbhushan Realtech (OPC) Pvt. Ltd.</b>
-              <span>BRPL - (OPC) · Civil Contracting &amp; Construction</span>
-            </div>
-            <div class="group-box">
-              <b>S B Enterprise</b>
-              <span>S B E · Strategic SRA &amp; Real Estate Development</span>
-            </div>
+          <div class="group-box">
+            <b>S B Enterprise</b>
+            <span>S B E · Strategic SRA &amp; Real Estate Development</span>
           </div>
         </div>
       </section>
@@ -2462,7 +2502,7 @@
           <div class="footer-logo-badge">
             <img src="images/logo.jpg" alt="MB Realty Logo">
           </div>
-          <h4>M B REALTY</h4>
+          <strong class="footer-brand-title">M B REALTY</strong>
           <p>Established in 1998, M B Realty delivers specialized Project Management Consultancy, SRA Redevelopment, and
             civil contracting solutions conforming to highest industry benchmarks.</p>
           <div style="margin-top:16px;">
@@ -2490,7 +2530,7 @@
         </div>
 
         <div class="footer-col">
-          <h5>Quick Navigation</h5>
+          <h4>Quick Navigation</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -2502,7 +2542,7 @@
         </div>
 
         <div class="footer-col">
-          <h5>Headquarters &amp; Contact</h5>
+          <h4>Headquarters &amp; Contact</h4>
           <div class="footer-address">
             <strong>M B REALTY</strong>
             Building No. 37/1956, Gandhinagar, 1st Floor,<br>
