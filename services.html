@@ -532,6 +532,7 @@
       scroll-behavior: smooth;
       flex: 1;
       -webkit-overflow-scrolling: touch;
+      touch-action: pan-x pan-y;
     }
 
     .quicknav-list::-webkit-scrollbar {
@@ -1301,8 +1302,8 @@
       }
 
       nav#mainNav {
-        position: fixed;
-        top: 68px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
         background: #ffffff;
@@ -1310,13 +1311,17 @@
         box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
         max-height: 0;
         overflow: hidden;
-        transition: max-height .35s cubic-bezier(0.16, 1, 0.3, 1);
+        visibility: hidden;
+        transition: max-height .35s cubic-bezier(0.16, 1, 0.3, 1), visibility .35s ease;
         width: 100%;
         display: block;
+        pointer-events: none;
       }
 
       nav#mainNav.open {
         max-height: 400px;
+        visibility: visible;
+        pointer-events: auto;
       }
 
       nav#mainNav ul {
@@ -2243,23 +2248,32 @@
     // Sub-navigation active state tracking on scroll
     const quickPills = document.querySelectorAll('.quicknav-pill');
     const observedSections = document.querySelectorAll('article.service-block, section.section-methodology, section.section-inquiry');
+    let lastActiveSectionId = '';
 
     window.addEventListener('scroll', () => {
       let currentId = '';
+      const scrollPos = window.scrollY + 160;
       observedSections.forEach(section => {
-        const top = section.offsetTop - 140;
-        if (window.scrollY >= top) {
+        if (scrollPos >= section.offsetTop) {
           currentId = section.getAttribute('id');
         }
       });
 
-      if (currentId) {
+      if (currentId && currentId !== lastActiveSectionId) {
+        lastActiveSectionId = currentId;
         quickPills.forEach(pill => {
           const href = pill.getAttribute('href');
           if (href === '#' + currentId) {
             pill.classList.add('active');
+            // Safely scroll ONLY the horizontal tabs container without affecting window scroll
             if (quicknavList) {
-              pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              const pillLeft = pill.offsetLeft;
+              const pillWidth = pill.offsetWidth;
+              const listWidth = quicknavList.clientWidth;
+              quicknavList.scrollTo({
+                left: pillLeft - (listWidth / 2) + (pillWidth / 2),
+                behavior: 'smooth'
+              });
             }
           } else if (href.startsWith('#') && href !== '#inquiry') {
             pill.classList.remove('active');
