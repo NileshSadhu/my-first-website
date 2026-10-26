@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>M B REALTY | Project Management Consultants &amp; Redevelopment Experts</title>
+  <meta name="description"
+    content="MB Realty is a premier Project Management Consultancy (PMC), SRA redevelopment, and civil construction enterprise with over 20+ years of proven delivery across residential and commercial sectors in Mumbai.">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f7faf8;
+      --surface2: #f0f5f2;
+      --panel: #ffffff;
+      --line: #e2e8e4;
+      --border: #d3ded7;
+      --brand: #008f55;
+      --brand-dark: #006b40;
+      --brand-light: #e6f6ee;
+      --brand-accent: #10b981;
+      --dark-green: #08291a;
+      --dark-surface: #0e3725;
+      --text: #1b2621;
+      --text-heading: #0b1a13;
+      --muted: #52635a;
+      --muted-light: #71877c;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 6px 24px -4px rgba(0, 50, 25, 0.08);
+      --shadow-lg: 0 16px 36px -6px rgba(0, 50, 25, 0.12);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 86px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* SVG Icon Utility */
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Top utility bar */
+    .top-bar {
+      background: #061e13;
+      color: #d1fae5;
+      font-size: 11px;
+      letter-spacing: .06em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 8px 0;
+    }
+
+    .top-bar .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .top-info {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .top-info a,
+    .top-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #e2f4eb;
+      transition: color .2s;
+    }
+
+    .top-info a:hover {
+      color: #72e4ac;
+    }
+
+    .top-social {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .top-social a {
+      color: #a7f3d0;
+      transition: transform .2s, color .2s;
+      font-weight: 600;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-social a:hover {
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Main Navigation Header */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow .3s, background .3s;
+    }
+
+    header.site-header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 40, 20, 0.08);
+      background: rgba(255, 255, 255, 0.99);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      position: relative;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1 0 0;
+      min-width: 0;
+    }
+
+    .logo-img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text strong {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark-green);
+      letter-spacing: .08em;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .logo-text span {
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brand);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Middle: True Centered Navigation Menu */
+    nav#mainNav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    nav#mainNav ul {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav#mainNav a {
+      font-size: 11.5px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text);
+      font-weight: 600;
+      position: relative;
+      padding: 8px 4px;
+      white-space: nowrap;
+      transition: color .25s;
+    }
+
+    nav#mainNav a:hover,
+    nav#mainNav a.active {
+      color: var(--brand);
+    }
+
+    nav#mainNav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand);
+      transition: width .25s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    nav#mainNav a:hover::after,
+    nav#mainNav a.active::after {
+      width: 100%;
+    }
+
+    /* Right: Actions */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      flex: 1 0 0;
+      min-width: 0;
+    }
+
+    .desk-call {
+      text-align: right;
+      font-size: 9.5px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted-light);
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+
+    .desk-call b {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--dark-green);
+      font-size: 12px;
+      font-weight: 700;
+      justify-content: flex-end;
+      white-space: nowrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--brand);
+      color: #ffffff;
+      font-size: 10.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0 20px;
+      height: 42px;
+      border: 1px solid var(--brand);
+      border-radius: 4px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all .25s;
+      font-family: var(--sans);
+    }
+
+    .btn:hover {
+      background: var(--brand-dark);
+      border-color: var(--brand-dark);
+      box-shadow: 0 4px 16px rgba(0, 143, 85, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .btn.ghost {
+      background: var(--brand-light);
+      color: var(--brand-dark);
+      border: 1px solid rgba(0, 143, 85, 0.25);
+    }
+
+    .btn.ghost:hover {
+      background: var(--brand);
+      color: #ffffff;
+      border-color: var(--brand);
+    }
+
+    /* Animated Clean Hamburger Menu Button */
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text-heading);
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+      transition: border-color .2s, background .2s;
+    }
+
+    .menu-toggle:hover {
+      border-color: var(--brand);
+      background: var(--surface);
+    }
+
+    .hamburger-box {
+      width: 18px;
+      height: 14px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--text-heading);
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
+      transform-origin: center;
+    }
+
+    .menu-toggle.active .hamburger-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .menu-toggle.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .menu-toggle.active .hamburger-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .mobile-nav-cta {
+      display: none;
+    }
+
+    /* Typography Utilities */
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--brand);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .eyebrow.line::before {
+      content: "";
+      width: 32px;
+      height: 1.5px;
+      background: var(--brand);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--serif);
+      color: var(--text-heading);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 56px 0 20px;
+    }
+
+    .hero-top {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 50px;
+      align-items: end;
+      margin-bottom: 36px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.2vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      margin-top: 10px;
+    }
+
+    .hero h1 em {
+      color: var(--brand);
+      font-style: italic;
+    }
+
+    .hero-copy p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 24px;
+    }
+
+    .hero-copy .btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero Showcase Banner */
+    .flag {
+      position: relative;
+      height: 520px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-md);
+      background: #0a1f14;
+    }
+
+    .flag-slides {
+      position: absolute;
+      inset: 0;
+    }
+
+    .flag-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out, transform 8s ease;
+      transform: scale(1.03);
+    }
+
+    .flag-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .flag-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flag::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6, 30, 19, 0.2) 0%, rgba(6, 30, 19, 0.85) 100%);
+      pointer-events: none;
+    }
+
+    .flag .cap {
+      position: absolute;
+      left: 36px;
+      bottom: 32px;
+      z-index: 2;
+      max-width: 640px;
+      color: #ffffff;
+    }
+
+    .flag .cap small {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #72e4ac;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .flag .cap h3 {
+      font-size: 32px;
+      color: #ffffff;
+      margin: 0 0 6px;
+      line-height: 1.2;
+    }
+
+    .flag .cap p {
+      font-size: 13.5px;
+      color: #e2f5ec;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .flag .coord {
+      position: absolute;
+      right: 36px;
+      top: 32px;
+      z-index: 2;
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #e2f5ec;
+      text-align: right;
+      line-height: 1.8;
+      background: rgba(6, 30, 19, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+
+    .flag-controls {
+      position: absolute;
+      right: 36px;
+      bottom: 32px;
+      z-index: 3;
+      display: flex;
+      gap: 8px;
+    }
+
+    .flag-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: all .3s;
+    }
+
+    .flag-dot.active {
+      background: #72e4ac;
+      width: 24px;
+      border-radius: 5px;
+    }
+
+    /* Key Metrics */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 24px 20px;
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease, border-color .35s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-card:hover {
+      border-color: var(--brand);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 32px -4px rgba(0, 143, 85, 0.16);
+    }
+
+    .stat-card strong {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--brand);
+      display: inline-block;
+      line-height: 1;
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), color .35s ease;
+    }
+
+    .stat-card:hover strong {
+      transform: scale(1.08);
+      color: var(--brand-accent);
+    }
+
+    .stat-card strong sup {
+      font-size: .55em;
+      color: var(--dark-green);
+      margin-left: 2px;
+    }
+
+    .stat-card span {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    /* 4 Hallmarks of MB Realty with Crisp SVG Icons */
+    .hallmarks {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .hallmark {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 20px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease, border-color .35s ease, background .35s ease;
+    }
+
+    .hallmark:hover {
+      border-color: var(--brand);
+      background: #ffffff;
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 12px 24px rgba(0, 143, 85, 0.12);
+    }
+
+    .hallmark-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      background: var(--brand-light);
+      color: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), background .35s ease, color .35s ease, box-shadow .35s ease;
+    }
+
+    .hallmark:hover .hallmark-icon {
+      transform: rotate(10deg) scale(1.15);
+      background: var(--brand);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 143, 85, 0.3);
+    }
+
+    .hallmark-text h5 {
+      margin: 0;
+      font-family: var(--sans);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+
+    .hallmark-text p {
+      margin: 2px 0 0;
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    /* About Section */
+    .section-about {
+      margin-top: 100px;
+      padding: 60px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-content h2 {
+      font-size: clamp(32px, 3.8vw, 48px);
+      line-height: 1.15;
+      margin: 12px 0 20px;
+    }
+
+    .about-content p {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .quote-box {
+      background: #ffffff;
+      border-left: 3px solid var(--brand);
+      padding: 20px 24px;
+      border-radius: 4px;
+      margin: 24px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quote-box p {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--dark-green);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .about-img-frame {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-img-frame img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(6, 30, 19, 0.92);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 16px 20px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      max-width: 280px;
+    }
+
+    .about-badge b {
+      display: block;
+      color: #72e4ac;
+      font-size: 16px;
+      font-family: var(--serif);
+    }
+
+    .about-badge span {
+      font-size: 11px;
+      color: #d1fae5;
+    }
+
+    /* Services / Responsibility Section */
+    .section-services {
+      margin-top: 100px;
+    }
+
+    .sec-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px;
+    }
+
+    .sec-header h2 {
+      font-size: clamp(32px, 3.8vw, 46px);
+      margin-top: 8px;
+    }
+
+    .sec-header p {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-top: 10px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s ease, border-color .35s ease;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--brand);
+      box-shadow: 0 24px 44px -6px rgba(0, 50, 25, 0.16);
+    }
+
+    .service-card .img-box {
+      height: 230px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .service-card:hover .img-box img {
+      transform: scale(1.1);
+    }
+
+    .service-card .tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(4px);
+      color: var(--brand);
+      font-size: 9.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      transition: all .35s ease;
+    }
+
+    .service-card:hover .tag {
+      background: var(--brand);
+      color: #ffffff;
+      border-color: var(--brand);
+      box-shadow: 0 4px 10px rgba(0, 143, 85, 0.3);
+    }
+
+    .service-card .body {
+      padding: 26px 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: var(--text-heading);
+    }
+
+    .service-card p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .service-card .more-link {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap .2s;
+    }
+
+    .service-card:hover .more-link {
+      gap: 10px;
+      color: var(--brand-dark);
+    }
+
+    /* Why Choose Us / Features */
+    .section-why {
+      margin-top: 100px;
+      background: var(--surface2);
+      padding: 80px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .why-img-frame {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .why-img-frame img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 18px;
+      background: #ffffff;
+      padding: 22px 24px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease, border-color .35s ease;
+    }
+
+    .why-item:hover {
+      border-color: var(--brand);
+      transform: translateX(10px) translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 143, 85, 0.12);
+    }
+
+    .why-item-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--brand-light);
+      color: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), background .35s ease, color .35s ease, box-shadow .35s ease;
+    }
+
+    .why-item:hover .why-item-icon {
+      transform: scale(1.15) rotate(-6deg);
+      background: var(--brand);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 143, 85, 0.3);
+    }
+
+    .why-item h4 {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: var(--text-heading);
+    }
+
+    .why-item p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Projects & Developments Showcase */
+    .section-projects {
+      margin-top: 100px;
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .project-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s ease, border-color .35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 46px -8px rgba(0, 50, 25, 0.18);
+      border-color: var(--brand);
+    }
+
+    .project-card .img {
+      height: 260px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card .img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-card:hover .img img {
+      transform: scale(1.1);
+    }
+
+    .project-card .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(6, 30, 19, 0.88);
+      backdrop-filter: blur(4px);
+      color: #72e4ac;
+      font-size: 9.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-weight: 700;
+      transition: background .3s;
+    }
+
+    .project-card:hover .badge {
+      background: var(--brand);
+      color: #ffffff;
+    }
+
+    .project-card .body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-card .loc {
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--brand);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .project-card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .project-specs {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+      margin-bottom: 18px;
+      font-size: 12px;
+    }
+
+    .project-specs div {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      color: var(--muted);
+    }
+
+    .project-specs div b {
+      color: var(--text-heading);
+    }
+
+    /* Featured Gallery */
+    .section-gallery {
+      margin-top: 100px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      height: 220px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.12);
+    }
+
+    .gallery-hover {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(6, 30, 19, 0.88) 0%, rgba(6, 30, 19, 0.25) 100%);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .35s ease, transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: flex-end;
+      padding: 18px;
+      color: #ffffff;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .gallery-item:hover .gallery-hover {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Clients / Partners Section */
+    .section-clients {
+      margin-top: 90px;
+      padding: 60px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .clients-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+
+    .client-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 240px;
+      box-shadow: var(--shadow-sm);
+      transition: all .3s;
+    }
+
+    .client-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand);
+    }
+
+    .client-card img {
+      max-height: 52px;
+      max-width: 160px;
+      object-fit: contain;
+      filter: grayscale(80%);
+      transition: filter .3s;
+    }
+
+    .client-card:hover img {
+      filter: grayscale(0%);
+    }
+
+    .client-card p {
+      font-size: 11.5px;
+      color: var(--text-heading);
+      margin: 10px 0 0;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Group of Companies Banner */
+    .section-group {
+      margin-top: 80px;
+      background: #072617;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 50px 48px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .group-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .group-left h3 {
+      color: #ffffff;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .group-left p {
+      color: #d1fae5;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .group-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .group-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 20px 18px;
+      transition: background .2s;
+    }
+
+    .group-box:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .group-box b {
+      color: #72e4ac;
+      font-size: 13.5px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .group-box span {
+      font-size: 11px;
+      color: #e2f5ec;
+    }
+
+    /* Consultation / Booking Form */
+    .section-contact {
+      margin-top: 100px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 60px 50px;
+      box-shadow: var(--shadow-md);
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 13px;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(0, 143, 85, 0.12);
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-footer {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .form-footer small {
+      font-size: 11.5px;
+      color: var(--muted-light);
+      max-width: 480px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .alert-success {
+      display: none;
+      grid-column: 1 / -1;
+      background: var(--brand-light);
+      color: var(--brand-dark);
+      border: 1px solid rgba(0, 143, 85, 0.3);
+      padding: 16px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      margin-top: 110px;
+      background: #051c11;
+      color: #ffffff;
+      padding: 70px 0 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr 1.2fr;
+      gap: 50px;
+    }
+
+    .footer-brand h4 {
+      color: #ffffff;
+      font-size: 22px;
+      margin: 14px 0 10px;
+    }
+
+    .footer-logo-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #ffffff;
+      padding: 7px 14px;
+      border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+
+    .footer-logo-badge img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Floating Image Badges Animation */
+    @keyframes badgeFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    .about-badge,
+    .flag .coord {
+      animation: badgeFloat 4.5s ease-in-out infinite;
+    }
+
+    /* Scroll-triggered Sliding and Entrance Animations */
+    .anim-fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .anim-slide-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .anim-slide-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .anim-zoom-in {
+      opacity: 0;
+      transform: scale(0.93);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .is-revealed {
+      opacity: 1 !important;
+      transform: translate(0) scale(1) !important;
+    }
+
+    .stagger-1 {
+      transition-delay: 0.08s;
+    }
+
+    .stagger-2 {
+      transition-delay: 0.16s;
+    }
+
+    .stagger-3 {
+      transition-delay: 0.24s;
+    }
+
+    .stagger-4 {
+      transition-delay: 0.32s;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.65;
+      max-width: 380px;
+    }
+
+    .footer-col h5 {
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #72e4ac;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer-col a {
+      transition: color .2s;
+    }
+
+    .footer-col a:hover {
+      color: #72e4ac;
+    }
+
+    .footer-address {
+      font-style: normal;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.65;
+    }
+
+    .footer-address strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer-contact-links {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-contact-links a {
+      color: #72e4ac;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+    }
+
+    .footer-contact-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .footer-bottom a {
+      color: #72e4ac;
+    }
+
+    /* Responsive Navigation & Breakpoints */
+    @media (max-width: 1200px) {
+      .desk-call {
+        display: none;
+        /* Hide phone text snippet so 6 links stay roomy & centered */
+      }
+
+      nav#mainNav ul {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .top-bar .wrap {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .top-info {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .nav {
+        height: 68px;
+      }
+
+      .logo-container {
+        flex: 0 1 auto;
+      }
+
+      .nav-actions {
+        flex: 0 0 auto;
+      }
+
+      nav#mainNav {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 14px 30px rgba(0, 30, 15, 0.12);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 99;
+        margin: 0;
+        display: block;
+        width: 100%;
+      }
+
+      nav#mainNav.open {
+        max-height: 520px;
+      }
+
+      nav#mainNav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 16px 24px 24px;
+      }
+
+      nav#mainNav li {
+        border-bottom: 1px solid var(--line);
+      }
+
+      nav#mainNav li:last-child {
+        border-bottom: none;
+      }
+
+      nav#mainNav a {
+        display: block;
+        padding: 14px 0;
+        font-size: 13px;
+      }
+
+      nav#mainNav a::after {
+        display: none;
+      }
+
+      .mobile-nav-cta {
+        display: block;
+        margin-top: 14px;
+        padding: 12px 0 6px;
+        border-top: 1px dashed var(--line);
+      }
+
+      nav#mainNav .mobile-nav-cta a.btn,
+      .mobile-nav-cta .btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 48px !important;
+        padding: 0 16px !important;
+        background: var(--brand) !important;
+        color: #ffffff !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        letter-spacing: .14em !important;
+        text-transform: uppercase !important;
+        border-radius: 6px !important;
+        border: 1px solid var(--brand) !important;
+        box-shadow: 0 4px 14px rgba(0, 143, 85, 0.35) !important;
+        text-decoration: none !important;
+        transition: all .25s ease !important;
+      }
+
+      nav#mainNav .mobile-nav-cta a.btn:hover,
+      .mobile-nav-cta .btn:hover {
+        background: var(--brand-dark) !important;
+        color: #ffffff !important;
+        box-shadow: 0 6px 18px rgba(0, 107, 64, 0.45) !important;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .desk-call {
+        display: none;
+      }
+
+      .hero-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .flag {
+        height: 440px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hallmarks {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid,
+      .why-grid,
+      .group-wrap {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .services-grid,
+      .project-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 0 18px;
+      }
+
+      .top-bar {
+        display: none;
+        /* Keep header ultra clean on small mobile devices */
+      }
+
+      .header-book-btn {
+        display: none;
+        /* In mobile drawer */
+      }
+
+      .logo-text strong {
+        font-size: 17px;
+      }
+
+      .logo-text span {
+        font-size: 8px;
+      }
+
+      .stats,
+      .hallmarks,
+      .group-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flag {
+        height: 380px;
+      }
+
+      .flag .cap h3 {
+        font-size: 24px;
+      }
+
+      .flag .coord {
+        font-size: 8px;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Contact Bar with Vector Icons -->
+  <aside class="top-bar" aria-label="Quick Contact Information">
+    <div class="wrap">
+      <div class="top-info">
+        <a href="tel:+919326469467" aria-label="Phone Number">
+          <span class="icon" style="width:14px; height:14px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+          </span>
+          +91-9326469467
+        </a>
+        <a href="mailto:mbrealtys@gmail.com" aria-label="Email Address">
+          <span class="icon" style="width:14px; height:14px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </span>
+          mbrealtys@gmail.com
+        </a>
+        <span>
+          <span class="icon" style="width:14px; height:14px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </span>
+          Mon - Sat 10:00 - 20:00
+        </span>
+      </div>
+      <div class="top-social">
+        <a href="https://www.facebook.com/M-B-Realty-243560239657512/" target="_blank" rel="noopener"
+          aria-label="Facebook Page">
+          <span class="icon" style="width:12px; height:12px;">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </span>
+          Facebook
+        </a>
+        <a href="https://twitter.com/MBRealty1" target="_blank" rel="noopener" aria-label="Twitter Profile">
+          <span class="icon" style="width:12px; height:12px;">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </span>
+          Twitter
+        </a>
+        <a href="#contact" style="color:#72e4ac; margin-left:4px;">Inquiry &rarr;</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Clean & Responsive Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap nav">
+      <a href="index.html" class="logo-container" aria-label="MB Realty Home">
+        <img src="images/logo.jpg" alt="MB Realty Logo" class="logo-img">
+        <div class="logo-text">
+          <strong>M B REALTY</strong>
+          <span>Architectural Holdings &amp; PMC</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation Menu (Desktop & Collapsible Mobile Drawer) -->
+      <nav id="mainNav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="mobile-nav-cta">
+            <a href="#contact" class="btn">Book Site Visit</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="desk-call">
+          Developer Desk
+          <b>
+            <span class="icon" style="width:12px; height:12px; color:var(--brand);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </span>
+            +91-9326469467
+          </b>
+        </div>
+        <a href="#contact" class="btn header-book-btn">Book Site Visit</a>
+
+        <!-- Clean Animated Hamburger Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero wrap">
+      <div class="hero-top">
+        <div>
+          <div class="eyebrow line">Master Real Estate Builders &amp; PMC</div>
+          <h1>Building Landmarks.<br><em>Engineering Skylines.</em></h1>
+        </div>
+        <div class="hero-copy">
+          <p>M B Realty is an established Project Management Consultancy (PMC), civil construction, and SRA
+            Redevelopment firm. Delivering excellence across Mumbai since 1998 with certified structural integrity,
+            transparent governance, and end-to-end execution.</p>
+          <div class="btns">
+            <a href="#projects" class="btn">Explore Projects</a>
+            <a href="#services" class="btn ghost">Our PMC Services</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Slider / Showcase Banner -->
+      <div class="flag">
+        <div class="flag-slides">
+          <div class="flag-slide active" data-title="Wadala Antop Hill"
+            data-desc="Premier Residential &amp; Commercial High-Rise Development"
+            data-specs="SRA Redevelopment · RCC Framed Structure · Certified Handover">
+            <img src="images/S-1.jpg" alt="Wadala Antop Hill Project - MB Realty">
+          </div>
+          <div class="flag-slide" data-title="Wadala Antop Hill Tower 2"
+            data-desc="Ultra-Modern Urban Architecture &amp; Structural Precision"
+            data-specs="BMC &amp; SRA Compliant · Monolithic Engineering · Modern Amenities">
+            <img src="images/S-2.jpg" alt="Wadala Antop Hill Phase 2 - MB Realty">
+          </div>
+          <div class="flag-slide" data-title="Signature Infrastructure &amp; Housing"
+            data-desc="Master Planned Urban Communities &amp; Redevelopment"
+            data-specs="Full PMC Oversight · On-Time Delivery · Premium Quality Standard">
+            <img src="images/S-3.jpg" alt="Wadala Antop Hill Phase 3 - MB Realty">
+          </div>
+          <div class="flag-slide" data-title="Architectural Excellence Across Mumbai"
+            data-desc="Constructed with Precision, High-Grade Materials &amp; Timely Handover"
+            data-specs="20+ Years Track Record · 25+ Completed Projects">
+            <img src="images/slider-1.JPG" alt="MB Realty High-Rise Development">
+          </div>
+        </div>
+
+        <div class="coord" id="flagSpecs">
+          SRA Redevelopment<br>
+          BMC &amp; RERA Compliant<br>
+          Structural Handover Record
+        </div>
+
+        <div class="cap">
+          <small>Signature Development · Mumbai</small>
+          <h3 id="flagTitle">Wadala Antop Hill</h3>
+          <p id="flagDesc">Premier Residential &amp; Commercial High-Rise Development by MB Realty.</p>
+        </div>
+
+        <div class="flag-controls" id="flagDots">
+          <div class="flag-dot active" data-idx="0"></div>
+          <div class="flag-dot" data-idx="1"></div>
+          <div class="flag-dot" data-idx="2"></div>
+          <div class="flag-dot" data-idx="3"></div>
+        </div>
+      </div>
+
+      <!-- Key Developer Metrics -->
+      <div class="stats">
+        <div class="stat-card anim-fade-up stagger-1">
+          <strong>25<sup>+</sup></strong>
+          <span>Total Projects Undertaken Across Mumbai</span>
+        </div>
+        <div class="stat-card anim-fade-up stagger-2">
+          <strong>20<sup>+</sup></strong>
+          <span>Successfully Completed &amp; Handed Over</span>
+        </div>
+        <div class="stat-card anim-fade-up stagger-3">
+          <strong>50<sup>+</sup></strong>
+          <span>PMC &amp; Redevelopment Consultancies</span>
+        </div>
+        <div class="stat-card anim-fade-up stagger-4">
+          <strong>20<sup>+</sup></strong>
+          <span>Years of Heritage (Established 1998)</span>
+        </div>
+      </div>
+
+      <!-- 4 Core Builder Values with Crisp SVG Icons -->
+      <div class="hallmarks">
+        <div class="hallmark anim-fade-up stagger-1">
+          <div class="hallmark-icon">
+            <span class="icon" style="width:22px; height:22px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                <path d="M9 22v-4h6v4"></path>
+                <path d="M8 6h.01"></path>
+                <path d="M16 6h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M16 10h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M16 14h.01"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="hallmark-text">
+            <h5>Professional Builder</h5>
+            <p>Proven civil engineering &amp; master planning</p>
+          </div>
+        </div>
+        <div class="hallmark anim-fade-up stagger-2">
+          <div class="hallmark-icon">
+            <span class="icon" style="width:22px; height:22px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="hallmark-text">
+            <h5>We Deliver Quality</h5>
+            <p>Rigorous quality diligence &amp; material audits</p>
+          </div>
+        </div>
+        <div class="hallmark anim-fade-up stagger-3">
+          <div class="hallmark-icon">
+            <span class="icon" style="width:22px; height:22px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+          </div>
+          <div class="hallmark-text">
+            <h5>Always On Time</h5>
+            <p>Committed delivery within authorized cost</p>
+          </div>
+        </div>
+        <div class="hallmark anim-fade-up stagger-4">
+          <div class="hallmark-icon">
+            <span class="icon" style="width:22px; height:22px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </span>
+          </div>
+          <div class="hallmark-text">
+            <h5>We Are Passionate</h5>
+            <p>Creating win-win solutions for clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section-about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-content anim-slide-left">
+          <div class="eyebrow line">About M B Realty</div>
+          <h2>Specialized Project Management Consultancy &amp; Construction</h2>
+          <p>The construction industry generally deals with various sectors viz. Real Estate &amp; Infrastructure,
+            segmented in Residential and Commercial developments. To manage such unique projects requires expertise with
+            organizations and a thorough body of knowledge.</p>
+          <p>Project Management Consultancy (PMC) plays a multifaceted role, offering services from inception to
+            completion. At every stage of the project life cycle, principles of pro-activeness and creating win-win
+            situations are paramount.</p>
+
+          <div class="quote-box">
+            <p>&ldquo;In order to deliver end-to-end project delivery on time, within authorized cost &amp; match the
+              expected quality standards.&rdquo;</p>
+          </div>
+
+          <p>Under our PMC services, we undertake planned activities designed in synchronization with client
+            requirements. This includes overall planning, coordination, monitoring, and controlling from inception to
+            closeout, handling statutory BMC and SRA Authority permissions with well-organized approaches.</p>
+
+          <div style="margin-top: 24px;">
+            <a href="about.html" class="btn">Read Full Company Profile &rarr;</a>
+          </div>
+        </div>
+
+        <div class="about-img-frame anim-slide-right">
+          <img src="images/DSC_1536-min.JPG" alt="MB Realty Architecture and Civil Site">
+          <div class="about-badge">
+            <b>M B Realty Engineering</b>
+            <span>Conforming to the highest standards in PMC, SRA and Redevelopment.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Responsibilities Section -->
+    <section class="section-services wrap" id="services">
+      <div class="sec-header anim-fade-up">
+        <div class="eyebrow">Our Specializations</div>
+        <h2>Core Responsibilities &amp; Offerings</h2>
+        <p>PMC is most effective when involved in the total project lifecycle from Conception to Closeout, managing
+          constraints of Time, Cost, Risk, Scope, Quality, and Resources.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: PMC -->
+        <article class="service-card anim-fade-up stagger-1">
+          <div class="img-box">
+            <img src="images/cns-1.jpg" alt="Project Management Consultancy (PMC)">
+            <span class="tag">Core Expertise</span>
+          </div>
+          <div class="body">
+            <h3>Project Management Consultancy</h3>
+            <p>Specialized PMC services involved across the entire project lifecycle. We manage knowledge, skills, round
+              table progress reviews, quality diligence, and delivery sessions to navigate complex engineering
+              challenges.</p>
+            <a href="#contact" class="more-link">Request PMC Consultation &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Service 2: SRA Project Planning -->
+        <article class="service-card anim-fade-up stagger-2">
+          <div class="img-box">
+            <img src="images/project-planning.jpg" alt="SRA Project Planning & Approvals">
+            <span class="tag">Authority Approvals</span>
+          </div>
+          <div class="body">
+            <h3>SRA Project Planning</h3>
+            <p>We are specialists in SRA &amp; Redevelopment schemes, guiding projects smoothly through municipal BMC
+              &amp; SRA Authority sanctioning, architectural documentation, tenant liaison, and structured execution.
+            </p>
+            <a href="#contact" class="more-link">Consult on SRA Schemes &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Service 3: Redevelopment -->
+        <article class="service-card anim-fade-up stagger-3">
+          <div class="img-box">
+            <img src="images/redevelopment.jpg" alt="Society Redevelopment Solutions">
+            <span class="tag">Urban Regeneration</span>
+          </div>
+          <div class="body">
+            <h3>Redevelopment</h3>
+            <p>Providing societies and developers with turnkey redevelopment advisory, feasibility studies, contractor
+              coordination, cost engineering, and timely structural handover with zero compromise.</p>
+            <a href="#contact" class="more-link">Explore Redevelopment &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Choose Us / Features -->
+    <section class="section-why">
+      <div class="wrap why-grid">
+        <div class="why-img-frame anim-slide-left">
+          <img src="images/04-min.jpg" alt="Why Choose MB Realty Engineers">
+        </div>
+        <div class="why-features anim-slide-right">
+          <div>
+            <div class="eyebrow line">Proven Track Record</div>
+            <h2 style="font-size:clamp(30px, 3.5vw, 44px); margin:8px 0 16px;">Why Choose M B Realty?</h2>
+            <p style="color:var(--muted); font-size:14px; margin:0 0 24px;">We have been active in this field since
+              1998, executing landmark construction and PMC projects under top builder brands.</p>
+          </div>
+
+          <div class="why-item">
+            <div class="why-item-icon">
+              <span class="icon" style="width:24px; height:24px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </span>
+            </div>
+            <div>
+              <h4>20+ Years of Field Experience</h4>
+              <p>In the construction industry since 1998, executing high-rise residential towers and commercial spaces
+                under reputed builders.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-item-icon">
+              <span class="icon" style="width:24px; height:24px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                  </path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </span>
+            </div>
+            <div>
+              <h4>Qualified PMC Experts</h4>
+              <p>Tackling constructability challenges, long-lead materials, inter-contractor coordination, engineering
+                issues, and safety protocol audits.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-item-icon">
+              <span class="icon" style="width:24px; height:24px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+            </div>
+            <div>
+              <h4>Best Customer Services &amp; Transparency</h4>
+              <p>Transparent communication, strict compliance with statutory authorities, and proactive resolution to
+                safeguard client investment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Portfolio -->
+    <section class="section-projects wrap" id="projects">
+      <div class="sec-header anim-fade-up">
+        <div class="eyebrow">Developments</div>
+        <h2>Our Latest Projects</h2>
+        <p>A glimpse into our active and completed residential and commercial landmarks.</p>
+      </div>
+
+      <div class="project-cards">
+        <article class="project-card anim-fade-up stagger-1">
+          <div class="img">
+            <img src="images/S-1.jpg" alt="Wadala Antop Hill Tower 1">
+            <span class="badge">Active Project</span>
+          </div>
+          <div class="body">
+            <div class="loc">Wadala Antop Hill, Mumbai</div>
+            <h3>Wadala Antop Hill – Phase I</h3>
+            <p>Comprehensive residential redevelopment incorporating earthquake-resistant RCC frame, optimal natural
+              ventilation, and modern community amenities.</p>
+            <div class="project-specs">
+              <div>Type<b>Residential &amp; Commercial</b></div>
+              <div>PMC Role<b>Complete Lifecycle PMC</b></div>
+              <div>Status<b>Structural Execution</b></div>
+            </div>
+            <a href="#contact" class="btn ghost" style="width:100%; justify-content:center;">Inquire Details</a>
+          </div>
+        </article>
+
+        <article class="project-card anim-fade-up stagger-2">
+          <div class="img">
+            <img src="images/S-2.jpg" alt="Wadala Antop Hill Tower 2">
+            <span class="badge">Active Project</span>
+          </div>
+          <div class="body">
+            <div class="loc">Wadala Antop Hill, Mumbai</div>
+            <h3>Wadala Antop Hill – Phase II</h3>
+            <p>High-rise tower development planned with modern safety norms, high-speed elevators, and integrated retail
+              facilities at podium level.</p>
+            <div class="project-specs">
+              <div>Type<b>High-Rise Residential</b></div>
+              <div>PMC Role<b>SRA Planning &amp; Engineering</b></div>
+              <div>Status<b>Finishing Phase</b></div>
+            </div>
+            <a href="#contact" class="btn ghost" style="width:100%; justify-content:center;">Inquire Details</a>
+          </div>
+        </article>
+
+        <article class="project-card anim-fade-up stagger-3">
+          <div class="img">
+            <img src="images/S-3.jpg" alt="Wadala Antop Hill Tower 3">
+            <span class="badge">Active Project</span>
+          </div>
+          <div class="body">
+            <div class="loc">Wadala Antop Hill, Mumbai</div>
+            <h3>Wadala Antop Hill – Phase III</h3>
+            <p>Sustainable housing project certified under municipal guidelines with rain-water harvesting, robust water
+              supply, and dedicated car parking.</p>
+            <div class="project-specs">
+              <div>Type<b>Integrated Redevelopment</b></div>
+              <div>PMC Role<b>Quality Audits &amp; Delivery</b></div>
+              <div>Status<b>Active Development</b></div>
+            </div>
+            <a href="#contact" class="btn ghost" style="width:100%; justify-content:center;">Inquire Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured Gallery -->
+    <section class="section-gallery wrap" id="gallery">
+      <div class="sec-header anim-fade-up">
+        <div class="eyebrow">Work Archive</div>
+        <h2>Our Featured Works</h2>
+        <p>Visual records of our civil construction sites, structural frameworks, and completed handovers.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item anim-zoom-in stagger-1">
+          <img src="images/gallery/gl-1.jpg" alt="MB Realty Featured Work 1">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+        <div class="gallery-item anim-zoom-in stagger-2">
+          <img src="images/gallery/gl-2.jpg" alt="MB Realty Featured Work 2">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+        <div class="gallery-item anim-zoom-in stagger-3">
+          <img src="images/gallery/gl-3.jpg" alt="MB Realty Featured Work 3">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+        <div class="gallery-item anim-zoom-in stagger-4">
+          <img src="images/gallery/gl-4.jpg" alt="MB Realty Featured Work 4">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+        <div class="gallery-item anim-zoom-in stagger-1">
+          <img src="images/gallery/gl-5.jpg" alt="MB Realty Featured Work 5">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+        <div class="gallery-item anim-zoom-in stagger-2">
+          <img src="images/gallery/gl-6.jpg" alt="MB Realty Featured Work 6">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+        <div class="gallery-item anim-zoom-in stagger-3">
+          <img src="images/gallery/gl-7.jpg" alt="MB Realty Featured Work 7">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+        <div class="gallery-item anim-zoom-in stagger-4">
+          <img src="images/gallery/gl-8.jpg" alt="MB Realty Featured Work 8">
+          <div class="gallery-hover">View Project Site &rarr;</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Group of Companies -->
+    <div class="wrap">
+      <section class="section-group anim-fade-up">
+        <div class="group-wrap">
+          <div class="group-left">
+            <div class="eyebrow" style="color:#72e4ac">Corporate Network</div>
+            <h3>Group of Companies</h3>
+            <p>Our synergistic corporate entities work in tandem to deliver comprehensive real estate, technical
+              contracting, and project management services.</p>
+          </div>
+          <div class="group-cards">
+            <div class="group-box">
+              <b>Brijbhushan Realtech (OPC) Pvt. Ltd.</b>
+              <span>BRPL - (OPC) · Civil Contracting &amp; Construction</span>
+            </div>
+            <div class="group-box">
+              <b>S B Enterprise</b>
+              <span>S B E · Strategic SRA &amp; Real Estate Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Clients & Partners -->
+    <section class="section-clients anim-fade-up">
+      <div class="wrap">
+        <div class="sec-header" style="margin-bottom:20px;">
+          <div class="eyebrow">Collaborative Success</div>
+          <h2>Our Prestigious Clients &amp; Associates</h2>
+        </div>
+
+        <div class="clients-grid">
+          <div class="client-card anim-fade-up stagger-1">
+            <img src="images/client_logo/SD-GROUP.png" alt="Shapoorji Pallonji and Dilip Thacker Group">
+            <p>Shapoorji Pallonji &amp; Dilip Thacker Group</p>
+          </div>
+          <div class="client-card anim-fade-up stagger-2">
+            <img src="images/client_logo/G-Corp.png" alt="G:Corp Developers Pvt. Ltd">
+            <p>G:Corp Developers Pvt. Ltd</p>
+          </div>
+          <div class="client-card anim-fade-up stagger-3">
+            <img src="images/client_logo/Nilhans.png" alt="NilhansInfra Pvt ltd">
+            <p>NilhansInfra Pvt. Ltd.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Consultation Form -->
+    <div class="wrap">
+      <section class="section-contact anim-fade-up" id="contact">
+        <div class="sec-header" style="margin-bottom:10px;">
+          <div class="eyebrow">Connect With Us</div>
+          <h2>Consult Our Engineering &amp; Sales Desk</h2>
+          <p>Book a site visit, inquire regarding SRA redevelopment, or schedule a PMC technical briefing.</p>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" placeholder="Rajesh" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" placeholder="Sharma" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="rajesh@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="+91-98200 12345" required>
+            </div>
+            <div class="form-group full">
+              <label for="service">Service / Development of Interest</label>
+              <select id="service">
+                <option value="pmc">Project Management Consultancy (PMC)</option>
+                <option value="sra">SRA Project Planning &amp; Permissions</option>
+                <option value="redevelopment">Society Redevelopment Solutions</option>
+                <option value="wadala">Wadala Antop Hill Developments</option>
+                <option value="general">General Inquiries / Builder Partnership</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="message">Message / Scope Description</label>
+              <textarea id="message"
+                placeholder="Please outline your project location, carpet area requirement, or consultancy scope..."></textarea>
+            </div>
+
+            <div class="alert-success" id="formAlert">
+              <strong>Thank you for contacting M B Realty!</strong><br>Your message has been logged. Our senior project
+              representative will get in touch with you shortly.
+            </div>
+
+            <div class="form-footer">
+              <small>
+                <span class="icon" style="width:14px; height:14px; color:var(--brand);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                Your details are strictly confidential and protected by MB Realty. We never share your data.
+              </small>
+              <button type="submit" class="btn">Send Inquiry</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer with Crisp Vector Icons -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-badge">
+            <img src="images/logo.jpg" alt="MB Realty Logo">
+          </div>
+          <h4>M B REALTY</h4>
+          <p>Established in 1998, M B Realty delivers specialized Project Management Consultancy, SRA Redevelopment, and
+            civil contracting solutions conforming to highest industry benchmarks.</p>
+          <div style="margin-top:16px;">
+            <a href="https://www.facebook.com/M-B-Realty-243560239657512/" target="_blank" rel="noopener"
+              style="color:#72e4ac; margin-right:16px; display:inline-flex; align-items:center; gap:6px;">
+              <span class="icon" style="width:13px; height:13px;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </span>
+              Facebook
+            </a>
+            <a href="https://twitter.com/MBRealty1" target="_blank" rel="noopener"
+              style="color:#72e4ac; display:inline-flex; align-items:center; gap:6px;">
+              <span class="icon" style="width:13px; height:13px;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </span>
+              Twitter
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Headquarters &amp; Contact</h5>
+          <div class="footer-address">
+            <strong>M B REALTY</strong>
+            Building No. 37/1956, Gandhinagar, 1st Floor,<br>
+            OMKARAM CHS. Ltd., Bandra East,<br>
+            Mumbai - 400051, Maharashtra, India.
+          </div>
+          <div class="footer-contact-links">
+            <a href="tel:+919326469467">
+              <span class="icon" style="width:14px; height:14px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </span>
+              +91-9326469467
+            </a>
+            <a href="mailto:mbrealtys@gmail.com">
+              <span class="icon" style="width:14px; height:14px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </span>
+              mbrealtys@gmail.com
+            </a>
+            <a href="mailto:mbrealty15@gmail.com">
+              <span class="icon" style="width:14px; height:14px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </span>
+              mbrealty15@gmail.com
+            </a>
+            <span
+              style="color:rgba(255,255,255,0.65); font-size:12px; display:inline-flex; align-items:center; gap:6px;">
+              <span class="icon" style="width:13px; height:13px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              Mon - Sat: 10:00 AM - 08:00 PM
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 M B Realty. All Rights Reserved. Designed with Structural Integrity.
+        </div>
+        <div>
+          Group of Companies: <b>Brijbhushan Realtech (OPC) Pvt. Ltd.</b> &bull; <b>S B Enterprise</b>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header shadow on scroll
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // Clean, Responsive Mobile Navigation Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    function toggleNav() {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    }
+
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleNav();
+    });
+
+    // Close mobile nav when clicking any link
+    document.querySelectorAll('#mainNav a').forEach(a => {
+      a.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close when clicking outside of navbar
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target) && mainNav.classList.contains('open')) {
+        mainNav.classList.remove('open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Hero Showcase Slider functionality
+    const slides = document.querySelectorAll('.flag-slide');
+    const dots = document.querySelectorAll('.flag-dot');
+    const titleEl = document.getElementById('flagTitle');
+    const descEl = document.getElementById('flagDesc');
+    const specsEl = document.getElementById('flagSpecs');
+    let currentSlide = 0;
+    let slideTimer;
+
+    function setSlide(idx) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      const activeSlide = slides[idx];
+      titleEl.textContent = activeSlide.dataset.title;
+      descEl.textContent = activeSlide.dataset.desc;
+      const specs = activeSlide.dataset.specs.split(' · ');
+      specsEl.innerHTML = specs.join('<br>');
+      currentSlide = idx;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      setSlide(next);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        clearInterval(slideTimer);
+        setSlide(+dot.dataset.idx);
+        slideTimer = setInterval(nextSlide, 5000);
+      });
+    });
+
+    slideTimer = setInterval(nextSlide, 5000);
+
+    // Contact Form handling
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('formAlert');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alertBox.style.display = 'block';
+      form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
+    });
+
+    // Smooth Scroll Reveal Intersection Observer for Cards and Images
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.anim-fade-up, .anim-slide-left, .anim-slide-right, .anim-zoom-in').forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
+</body>
+
+</html>
